@@ -1,0 +1,77 @@
+
+/*Main*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #000;
+  font-size: 1em;
+  line-height: 1.8em;
+  font-weight: 400;
+  font-family: 'Roboto', Helvetica, Arial, serif;
+  width: 100%;
+}
+
+/*Video*/
+
+video {
+  max-width: 100%;
+}
+
+.mejs__inner .mejs__controls {
+  background-color: orange;
+}
+
+/*Transcript*/
+
+.transcript-wrap {
+    padding: 0 15px;
+}
+
+p {
+  margin-bottom: 30px;
+}
+
+.active {
+  color: orange;
+}
+
+
+/*Media Queries*/
+@media (min-width: 768px) {
+  body { 
+    padding-top: 50px;
+    font-size: 1.2em;
+    line-height: 2em;
+  }  
+  .main {
+    max-width: 1280px;
+    margin: auto;
+    padding: 30px;
+  }
+  .transcript-wrap {
+    padding: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
