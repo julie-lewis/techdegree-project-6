@@ -4,19 +4,19 @@ $('#mediaplayer').mediaelementplayer({
 });
 
 const video = document.querySelector('video');
-const allSpan = document.querySelectorAll('span');
+const textSpan = document.querySelectorAll('.transcript-wrap span');
 
 // HIGHLIGHT TRANSCRIPT TEXT
 
 video.addEventListener('timeupdate', function () {
-  for (let i = 0; i < allSpan.length; i += 1) {
-    let startTime = allSpan[i].getAttribute('data-start');
-    let endTime = allSpan[i].getAttribute('data-end');
+  for (let i = 0; i < textSpan.length; i += 1) {
+    let startTime = textSpan[i].getAttribute('data-start');
+    let endTime = textSpan[i].getAttribute('data-end');
     let currentTime = video.currentTime;
     if ( currentTime >= startTime && currentTime <= endTime) {
-      allSpan[i].className = "active";
+      textSpan[i].className = "active";
     } else {
-      allSpan[i].className = "inactive";
+      textSpan[i].className = "inactive";
     }
   }
 });
@@ -24,17 +24,17 @@ video.addEventListener('timeupdate', function () {
 // CLICK TO SET TIME IN VIDEO
 
 
-function textClick (element) {
-  element.addEventListener("click", function() {
-     let newTime = element.getAttribute('data-start');
-     if (element) {
+function textClick (span) {
+  span.addEventListener("click", function() {
+     let newTime = span.getAttribute('data-start');
+     if (span) {
       video.currentTime = newTime;
       video.play();
      }
  });
 }
 
-for (let i = 0; i < allSpan.length; i += 1) {
-  let span = allSpan[i];
+for (let i = 0; i < textSpan.length; i += 1) {
+  let span = textSpan[i];
   textClick (span);
 }

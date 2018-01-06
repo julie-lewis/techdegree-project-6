@@ -16,9 +16,6 @@ body {
 
 /*Video*/
 
-video {
-  max-width: 100%;
-}
 
 .mejs__inner .mejs__controls {
   background-color: orange;
@@ -32,6 +29,10 @@ video {
 
 p {
   margin-bottom: 30px;
+}
+
+.transcript-wrap span {
+  cursor: pointer;
 }
 
 .active {
