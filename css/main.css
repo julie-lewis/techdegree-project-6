@@ -1,8 +1,10 @@
 
 /*Main*/
 
+/* Added max-width for Safari */
 * {
   box-sizing: border-box;
+  max-width: 100%;
 }
 
 body {
@@ -16,8 +18,9 @@ body {
 
 /*Video*/
 
-video {
-  max-width: 100%;
+/* Fixes for appended sizes/IDs in Safari */
+#mediaplayer, .mejs__container, #mediaplayer_html5  {
+  max-width: 100% !important;
 }
 
 .mejs__inner .mejs__controls {
